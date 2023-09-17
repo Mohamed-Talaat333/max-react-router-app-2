@@ -5,13 +5,13 @@ function EventsList({ events }) {
     <div className={classes.events}>
       <h1>All Events</h1>
       <ul className={classes.list}>
-        {events.map((event) => (
-          <li key={event.id} className={classes.item}>
+        {events.map((item) => (
+          <li key={item.id} className={classes.item}>
             <a href="...">
-              <img src={event.image} alt={event.title} />
+              <img src={item.image} alt={item.title} />
               <div className={classes.content}>
-                <h2>{event.title}</h2>
-                <time>{event.date}</time>
+                <h2>{item.title}</h2>
+                <time>{item.date}</time>
               </div>
             </a>
           </li>
