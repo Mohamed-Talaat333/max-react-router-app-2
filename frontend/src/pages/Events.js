@@ -5,8 +5,6 @@ import EventsList from "components/EventsList";
 function EventsPage() {
   const eventsList = useLoaderData();
 
-  // console.log(eventsList);
-
   return (
     <>
       <div style={{ textAlign: "center" }}>

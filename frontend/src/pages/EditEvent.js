@@ -1,7 +1,10 @@
+import EventForm from "components/EventForm";
+
+
 function EditEventPage() {
     return (
         <>
-            <h1>This is from Edit Event Page</h1>
+            <EventForm />
 
             <span>Yataaa</span>
         </>
