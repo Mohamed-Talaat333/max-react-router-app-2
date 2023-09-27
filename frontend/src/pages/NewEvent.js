@@ -1,12 +1,10 @@
 import EventForm from "components/EventForm";
-import { json } from "react-router-dom";
+import { json, redirect } from "react-router-dom";
 
 function NewEventPage() {
     return (
         <>
             <EventForm />
-
-            <span>Yataaa</span>
         </>
     )
 }
@@ -15,7 +13,6 @@ export default NewEventPage;
 
 export async function action({ request, params }) {
     const data = await request.formData();
-
 
     const eventData = {
         title: data.get("title"),
@@ -37,4 +34,6 @@ export async function action({ request, params }) {
     if (!response.ok) {
         throw json({ message: "Could not save event." }, { status: 500 });
     }
+
+    return redirect("/events");
 }
