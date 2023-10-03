@@ -29,7 +29,7 @@ const router = createBrowserRouter([
             id: "event-details",
             loader: eventDetailsLoader,
             children: [
-              { path: "", element: <EventDetailsPage />, action: deleteEventAction },
+              { index: true, element: <EventDetailsPage />, action: deleteEventAction },
               { path: "edit", element: <EditEventPage /> },
             ],
           },
