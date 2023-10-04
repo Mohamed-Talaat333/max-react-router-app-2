@@ -6,7 +6,7 @@ function EditEventPage() {
 
   return (
     <>
-      <EventForm event={event} />
+      <EventForm method="PATCH" event={event} />
     </>
   );
 }

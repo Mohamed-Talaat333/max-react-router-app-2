@@ -27,8 +27,6 @@ export async function loader({ request, params }) {
 }
 
 export async function action({ params, request }) {
-  console.log("fetched");
-
   const eventId = params.eventId;
 
   console.log(eventId);
